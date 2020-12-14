@@ -9,10 +9,10 @@ feature "user can search for food details" do
     click_on "Search"
 
     expect(current_path).to eq(food_search_path)
-    expect(page).to have_content("10 Results")
-    expect(page).to have_css(".food", count: 10)
+    expect(page).to have_content("246 Results")
+    expect(page).to have_css(".food-result", count: 10)
 
-    within(first(".food")) do
+    within(first(".food-result")) do
       expect(page).to have_css(".gtin-upc-code")
       expect(page).to have_css(".description")
       expect(page).to have_css(".brand-owner")

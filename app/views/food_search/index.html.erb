@@ -1,1 +1,10 @@
-<h1><%=
+<h1><%= @food_hits %> Results</h1>
+<% @foods.each do |food| %>
+  <ul class="food-result">
+    <li class="description"><%= food[:description] %></li>
+    <li class="gtin-upc-code"><%= food[:fdcId] %></li>
+
+    <li class="brand-owner"><%= food[:brandOwner] %></li>
+    <li class="ingredients"><%= food[:ingredients] %></li>
+  </ul>
+<% end %>
